@@ -12,8 +12,25 @@
     <form action="/api" method="POST">
         <input type="text" placeholder="Question" name="question">
         <input type="text" placeholder="Answer" name="answer">
-        <button type="button">SUBMIT</button>
+        <button type="submit">SUBMIT NEW</button>
+        <button type="button" id="updateButton">UPDATE EXISTING</button>
     </form>
-    
+    <!--Make sure the button type is 'submit' for the action to work-->
+
+    <div>
+        <ul>
+            <% for(i = 0; i < questions.length; i++) {%>
+                <li class="question">
+                    <span><%= questions[i].question %> </span>
+                    <span><%= questions[i].answer %></span>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+    <div>
+        <h3>Delete Stuff Here</h3>
+        <input type="text" placeholder="question to delete" id="deleteInput"><button id="deleteButton">DELETE</button>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
