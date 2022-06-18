@@ -1,6 +1,10 @@
+//This Database is currently configured to the BANKI-QUESTIONS database. You will need to create a new database configuration to build a new project. 
+
+
+
 //set up dependencies/packages needed
 const express = require('express')
-const PORT = 3000
+const PORT = 4000
 const app = express()
 const MongoClient = require('mongodb').MongoClient
 const bodyParser = require('body-parser')

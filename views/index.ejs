@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Database Builder</title>
 </head>
 <body>
     <h1>Hey! Use this to create api's quicker. 😎</h1>
 
     <form action="/api" method="POST">
-        <input type="text" placeholder="Question" name="question">
-        <input type="text" placeholder="Answer" name="answer">
+        <textarea class="questionBox" type="text" name="question" rows="5" cols="33">Question..</textarea><br>
+        <textarea class="answerBox" type="text" name="answer" rows="5" cols="33">Answer..</textarea><br>
         <button type="submit">SUBMIT NEW</button>
         <button type="button" id="updateButton">UPDATE EXISTING</button>
     </form>
@@ -21,7 +22,7 @@
         <ul>
             <% for(i = 0; i < questions.length; i++) {%>
                 <li class="question">
-                    <span><%= questions[i].question %> </span>
+                    <span><%= questions[i].question %>: </span>
                     <span><%= questions[i].answer %></span>
                 </li>
             <% } %>
